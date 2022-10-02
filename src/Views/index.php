@@ -21,7 +21,7 @@
             <td class="p-2"><a href="/<?= $service['destination']['location']['0']['crs'] ?>"><?= $service['destination']['location']['0']['locationName'] ?></a></td>
             <td class="p-2"><?= isset($service['platform']) ? $service['platform'] : '?' ?></td>
             <td class="p-2 <?= $service['operatorCode'] ?>"><?= $service['operator'] ?> (<?= $service['operatorCode'] ?>)</td>
-            <td class="p-2"><a href="/<?= base64_encode($service['serviceID']) ?>"><?= $service['rsid'] ?> (<?= $service['serviceType'] ?>)</a></td>
+            <td class="p-2"><a href="/<?= base64_encode($service['serviceID']) ?>"><?= $service['rsid'] ?? '' ?> (<?= $service['serviceType'] ?>)</a></td>
         </tr>
     <?php endforeach; ?>
     </tbody>
