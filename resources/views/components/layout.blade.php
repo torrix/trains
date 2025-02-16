@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{{ $title ?? config('app.name') }}</title>
     @vite(['resources/css/app.scss', 'resources/js/app.js'])
+    <script src="//unpkg.com/htmx.org"></script>
+    <script src="//unpkg.com/alpinejs" defer></script>
 </head>
 <body>
 <x-nav />
